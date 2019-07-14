@@ -30,8 +30,8 @@
 		data(){
 			return {
 				LoginForm:{
-					username:'',
-					password:''
+					username:'admin',
+					password:'123456'
 				},
 				LoginFormRules:{
 					username: [
@@ -51,11 +51,13 @@
 				this.$refs.LoginFormRef.validate(async (valid)=>{
 					if(!valid) return;
 					const {data:res}=await this.$http.post('login',this.LoginForm);	
-					// console.log(res);
+					console.log(res);
 					if(res.meta.status!=200){
 						return this.$message.error('登录失败')
 					}
-					this.$message.success('登陆成功')
+					this.$message.success('登陆成功');
+					window.sessionStorage.setItem('token',res.data.token);
+					this.$router.push('/home');
 				});
 			},
 			reset(){
