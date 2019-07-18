@@ -4,5 +4,8 @@ html,
     height: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: #2b4b6b; */
+}
+
+.breadcrumb {
+    margin-bottom: 15px;
 }
