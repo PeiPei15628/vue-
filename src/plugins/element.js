@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import { Button, Form, Input, FormItem, Message, Container, Header, Aside, Main, Row, Col, Menu, Submenu, MenuItem, Breadcrumb, BreadcrumbItem, Card, Table, TableColumn, Switch, Tooltip, Pagination, Dialog, MessageBox, Select, Option, Tag, Tree, Divider } from 'element-ui'
+import { Button, Form, Input, FormItem, Message, Container, Header, Aside, Main, Row, Col, Menu, Submenu, MenuItem, Breadcrumb, BreadcrumbItem, Card, Table, TableColumn, Switch, Tooltip, Pagination, Dialog, MessageBox, Select, Option, Tag, Tree, Divider, Cascader, Alert, Tabs, TabPane, Steps, Step, Timeline, TimelineItem, Checkbox, CheckboxGroup, Upload } from 'element-ui'
+import ZkTable from 'vue-table-with-tree-grid'
+
+Vue.component('zk-table', ZkTable)
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm;
 
@@ -31,3 +34,14 @@ Vue.use(Option)
 Vue.use(Tag)
 Vue.use(Tree)
 Vue.use(Divider)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Steps)
+Vue.use(Step)
+Vue.use(Timeline)
+Vue.use(TimelineItem)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
